@@ -9,9 +9,9 @@ const CONTRACT_ABI = [{"constant":true,"inputs":[],"name":"name","outputs":[{"na
 const contract = new Contract(CONTRACT_ADDRESS ,CONTRACT_ABI, provider)
 
 const main = async () => {
-    
+
     const name = await contract.name()
-    console.log(name)
+    console.log(`Whale Tracker has started, tracking whalles from ${name}`)
 }
 
 main()
