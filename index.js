@@ -8,13 +8,17 @@ const CONTRACT_ABI = [{"constant":true,"inputs":[],"name":"name","outputs":[{"na
 
 const contract = new Contract(CONTRACT_ADDRESS ,CONTRACT_ABI, provider)
 
+const transferLimit = 10000000000000 //100,000 USDT tokens
+
 const main = async () => {
 
     const name = await contract.name()
     console.log(`Whale Tracker has started, tracking whalles from ${name}`)
 
     contract.on('Transfer', (from, to, amount, data) => {
-        console.log(from,to,amount,data)
+        if(amount.toNumber() >= transferLimit) {
+            console.log(from,to,amount,data)
+        }
     })
 }
 
