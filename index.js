@@ -12,6 +12,10 @@ const main = async () => {
 
     const name = await contract.name()
     console.log(`Whale Tracker has started, tracking whalles from ${name}`)
+
+    contract.on('Transfer', (from, to, amount, data) => {
+        console.log(from)
+    })
 }
 
 main()
