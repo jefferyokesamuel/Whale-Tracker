@@ -8,7 +8,7 @@ const CONTRACT_ABI = [{"constant":true,"inputs":[],"name":"name","outputs":[{"na
 
 const contract = new Contract(CONTRACT_ADDRESS ,CONTRACT_ABI, provider)
 
-const transferLimit = 10000000000000 //100,000 USDT tokens
+const transferLimit = 100000000000 //100,000 USDT tokens
 
 const main = async () => {
 
