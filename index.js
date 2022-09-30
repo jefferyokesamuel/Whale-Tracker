@@ -17,7 +17,7 @@ const main = async () => {
 
     contract.on('Transfer', (from, to, amount, data) => {
         if(amount.toNumber() >= transferLimit) {
-            console.log(from,to,amount,data)
+            console.log(`New whale transaction from ${name}: https://etherscan.io/tx/${data.transactionHash}`)
         }
     })
 }
