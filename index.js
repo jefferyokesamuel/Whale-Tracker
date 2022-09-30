@@ -9,8 +9,7 @@ const CONTRACT_ABI =
 const contract = new ethers.Contract(CONTRACT_ADDRESS, ,provider)
 
 const main = async () => {
-    xcvcx
-
+    
     const block = await provider.getBlockNumber()
     console.log(block)
     console.log('Program running');
