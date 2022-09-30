@@ -14,7 +14,7 @@ const main = async () => {
     console.log(`Whale Tracker has started, tracking whalles from ${name}`)
 
     contract.on('Transfer', (from, to, amount, data) => {
-        console.log(from)
+        console.log(from,to,amount,data)
     })
 }
 
